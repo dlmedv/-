@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Kreon';
+	src: url('./assest/fonts/Kreon-Regular.ttf') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Kreon';
+	src: url('./assest/fonts/Kreon-Light.ttf') format('ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+html,
+body {
+	font-family: 'Kreon', sans-serif;
+}
