@@ -1,17 +1,23 @@
-
-import  styles from './styles.module.css';
+import { useContext } from 'react'
+import { Context } from '../../Context/Context'
+import styles from './styles.module.css'
 
 const Select: React.FC = () => {
-  return (
-    <div className={styles.from}>
-      <select className={styles.formSelect}>
-        <option>AED</option>
-        <option selected>RUB</option>
-        <option>ALL</option>
-        <option>AMD</option>
-      </select>
-    </div>
-  );
+	const { currency, setCurrency } = useContext(Context)
+	return (
+		<div className={styles.from}>
+			<select
+				className={styles.formSelect}
+				value={currency}
+				onChange={(event) => setCurrency(event.currentTarget.value)}
+			>
+				<option value='aed'>AED</option>
+				<option value='rub'>RUB</option>
+				<option value='all'>ALL</option>
+				<option value='amd'>AMD</option>
+			</select>
+		</div>
+	)
 }
 
-export default Select;
+export default Select
